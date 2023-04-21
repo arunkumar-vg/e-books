@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "name": "Arunkumar V G",
-      "email": "arunkumarvg@ebooks.com",
+      "name": "Arun",
+      "email": "arunkumarvg@gmail.com",
       "password": "Admin@123",
       "id": 1
     }
   ],
-  "comments": [ ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

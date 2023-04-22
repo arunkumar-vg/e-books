@@ -15,7 +15,7 @@ const Register = () => {
   });
 
   const handleSubmit = async () => {
-    await axios.post('http://localhost:3001/users', user);
+    await axios.post('http://localhost:4005/users', user);
     setUser({ name: '', email: '', password: '' });
     navigate('/login');
   };

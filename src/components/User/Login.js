@@ -18,7 +18,7 @@ const Login = () => {
 
   const login = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/users', {
+      const response = await axios.get('http://localhost:4005/users', {
         params: {
           email: user?.email,
           password: user?.password

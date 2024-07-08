@@ -1,12 +1,15 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../common/Navbar';
+import ListingPage from './ListingPage';
 
 const LandingPage = () => {
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="landing-page">
-      <Navbar />
+    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <ListingPage />
     </div>
   );
 };

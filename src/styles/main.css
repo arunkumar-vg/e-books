@@ -1,11 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.landing-page .header {
+.light-mode {
+  background-color: #bf7b00;
+  color: #4a4a4a;
+  height: 100vh;
+  padding: 0.5rem;
+  overflow: scroll;
+}
+
+.dark-mode {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  height: 100vh;
+  padding: 0.5rem;
+  overflow: scroll;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.light-mode a {
+  color: #007bff;
+}
+
+.dark-mode a {
+  color: #82b1ff;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.light-mode .button {
+  background-color: #ffd9b3;
+  color: #4A4A4A;
+}
+
+.dark-mode .button {
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.accent {
+  color: #007bff;
+}
+
+.dark-mode .accent {
+  color: #82b1ff;
+}
+
+.header {
   position: relative;
   top: 0;
   display: flex;
-  background-color: #EFEFEF;
+  background-color: #cfc9c9;
   color: #1A2E43;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 .header-left {
@@ -31,18 +93,20 @@
   align-items: center;
   padding: 5px;
   transition: box-shadow 0.3s ease-in-out;
-  width: 5.75rem;
-}
-
-.header-right div:hover {
   cursor: pointer;
-  color: #425F8A;
+  color: #454647;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.active-tab {
-  background-color: #FFA500;
-  color: #425F8A;
+.light-mode .active-tab {
+  background-color: #ff9c39d1;
+  color: #4e4e4e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .active-tab {
+  background-color: #424242;
+  color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -57,7 +121,7 @@
 .button-login {
   background-color: #5787d7;
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.25rem;
   font-weight: 500;
   border-radius: 5px;
   border: 0;
@@ -93,4 +157,16 @@
 
 .fs-small {
   font-size: 0.875rem !important;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }

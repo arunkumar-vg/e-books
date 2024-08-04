@@ -1,16 +1,16 @@
 /* eslint-disable */
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import PDFViewer from "./components/PDFViewer";
+import ListingPage from "./components/ListingPage";
+import FileReader from "./components/FileReader";
 
 const Rpoutes = () => {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/pdf-viewer/:filename" element={<PDFViewer />} />
+        <Route path="/" element={<ListingPage />} />
+        <Route path="/:fileName" element={<FileReader />} />
       </Routes>
     </BrowserRouter>
   );

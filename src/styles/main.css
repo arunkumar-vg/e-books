@@ -8,7 +8,7 @@ body {
   color: #4a4a4a;
   height: 100vh;
   padding: 0.5rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .dark-mode {
@@ -16,7 +16,20 @@ body {
   color: #e0e0e0;
   height: 100vh;
   padding: 0.5rem;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar {
+  overflow-y: scroll;
 }
 
 a {
@@ -62,7 +75,13 @@ a {
   top: 0;
   display: flex;
   background-color: #cfc9c9;
+  background-color: #cfc9c9;
   color: #1A2E43;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
   font-size: 14px;
   font-weight: 500;
   padding: 0.5rem;
@@ -101,6 +120,13 @@ a {
 .light-mode .active-tab {
   background-color: #ff9c39d1;
   color: #4e4e4e;
+  color: #454647;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.light-mode .active-tab {
+  background-color: #ff9c39d1;
+  color: #4e4e4e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -121,6 +147,7 @@ a {
 .button-login {
   background-color: #5787d7;
   color: #ffffff;
+  font-size: 0.25rem;
   font-size: 0.25rem;
   font-weight: 500;
   border-radius: 5px;
@@ -159,14 +186,6 @@ a {
   font-size: 0.875rem !important;
 }
 
-.pdf-viewer {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
-
-.pdf-viewer iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.cursor-pointer {
+  cursor: pointer;
 }

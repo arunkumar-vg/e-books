@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const ListingPage = () => {
   const [files, setFiles] = useState([]);
@@ -16,18 +16,23 @@ const ListingPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>List of PDF Files</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {files.map((file, index) => (
-          <div key={index} style={{ margin: '10px' }}>
-            <Link to={`/pdf-viewer/${file}`}>
-            <iframe title='file' src={`http://localhost:5001/files/${file}?page=1`} scrolling="no" width="100%" height="450"></iframe>
-            </Link>
-          </div>
-        ))}
+    <>
+      <div>
+        <h1>Available Books</h1>
+        <div className="d-flex flex-wrap">
+          {files.map((file, index) => (
+            <div
+              className="col-6 mt-4"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              key={index}
+            >
+              <a href={`/${file}`} className="link-light cursor-pointer">{file?.replace(/\.pdf$/, '')}</a>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
